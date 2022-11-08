@@ -65,3 +65,23 @@ blockquote {
 	margin: 0px;
 	font-style: italic;
 }
+
+
+.candrcontainer {
+ 	display: flex;
+}
+
+.leftitem, .rightitem {
+	padding: 16px;
+	min-width: 400px;
+	width: 50%;
+}
+
+.leftitem {
+	background-color: #dff;
+}
+
+.rightitem {
+	background-color: #ffd;
+}
+

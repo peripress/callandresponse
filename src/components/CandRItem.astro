@@ -1,0 +1,13 @@
+---
+import '../styles/global.css';
+
+const {title} = Astro.props;;
+const {author} = Astro.props;;
+
+---
+
+<div class="leftitem">
+	<h1>{title}</h1>
+	<h3>{author}</h3>
+	<slot />
+</div>

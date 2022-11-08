@@ -71,17 +71,11 @@ blockquote {
  	display: flex;
 }
 
-.leftitem, .rightitem {
-	padding: 16px;
+.candritem {
+	background-color: #dff;
+	margin: 0 2px;
+	padding: 32px;
 	min-width: 400px;
 	width: 50%;
-}
-
-.leftitem {
-	background-color: #dff;
-}
-
-.rightitem {
-	background-color: #ffd;
 }
 

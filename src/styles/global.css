@@ -4,15 +4,16 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 body {
-	font-family: Verdana, sans-serif;
+	font-family: Fraunces, serif;
+	font-size: 18px;
+	font-weight: 300;
 	margin: auto;
 	padding: 20px;
-	max-width: 65ch;
 	text-align: left;
 	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	line-height: 1.5;
+	line-height: 1.65;
 	color: #444;
 }
 h1,
@@ -72,7 +73,7 @@ blockquote {
 }
 
 .candritem {
-	background-color: #dff;
+	background-color: #eff;
 	margin: 0 2px;
 	padding: 32px;
 	min-width: 400px;

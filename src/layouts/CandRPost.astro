@@ -6,6 +6,8 @@ import CandRLeft from '../components/CandRLeft.astro';
 import CandRRight from '../components/CandRRight.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
+const {nextup} = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -17,7 +19,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 				max-width: 100%;
 			}
 
-
+			.next {
+				margin: 0 auto;
+				padding: 24px;
+				text-align: center;
+			}
 		</style>
 	</head>
 	<body>
@@ -29,6 +35,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
 			</div>
 		</main>
+		<div class="next">
+			<a href={nextup}>Next Pair</a>
+		</div>
 		<Footer />
 	</body>
 </html>

@@ -3,11 +3,13 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CandRItem from '../../components/CandRItem.astro';
+import CandRBio from '../../components/CandRBio.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
-import CandRLayout from '../../layouts/CandR.astro';
+import CandRLayout from '../../layouts/CandRPost.astro';
 ---
 
-<CandRLayout>
+<CandRLayout nextup="#">
+
 	<CandRItem title="We Wanted More" author="Justin Torres">
 		<p>We wanted more. We knocked the butt ends of our forks against the table, tapped our spoons against our empty bowls; we were hungry. We wanted more volume, more riots. We turned up the knob on the TV until our ears ached with the shouts of angry men. We wanted more music on the radio; we wanted beats; we wanted rock. We wanted muscles on our skinny arms. We had bird bones, hollow and light, and we wanted more density, more weight. We were six snatching hands, six stomping feet; we were brothers, boys, three little kings locked in a feud for more.</p>
 
@@ -28,9 +30,13 @@ import CandRLayout from '../../layouts/CandR.astro';
 		<p>“Who’s your daddy?” we said, then we laughed and tossed them into a shoebox.</p>
 
 		<p>Always more, always hungrily scratching for more. But there were times, quiet moments, when our mother was sleeping, when she hadn’t slept in two days, and any noise, any stair creak, any shut door, any stifled laugh, any voice at all, might wake her, those still, crystal mornings, when we wanted to protect her, this confused goose of a woman, this stumbler, this gusher, with her backaches and headaches and her tired, tired ways, this uprooted Brooklyn creature, this tough talker, always with tears when she told us she loved us, her mixed-up love, her needy love, her warmth, those mornings when sunlight found the cracks in our blinds and laid itself down in crisp strips on our carpet, those quiet mornings when we’d ﬁx ourselves oatmeal and sprawl onto our stomachs with crayons and paper, with glass marbles that we were careful not to rattle, when our mother was sleeping, when the air did not smell like sweat or breath or mold, when the air was still and light, those mornings when silence was our secret game and our gift and our sole accomplishment—we wanted less: less weight, less work, less noise, less father, less muscles and skin and hair. We wanted nothing, just this, just this.</p>
-	</CandRItem>
-	<CandRItem title="On Earth We're Briefly Gorgeous" author="Ocean Vuong">
 
+		<CandRBio>
+			This is a bio
+		</CandRBio>
+	</CandRItem>
+
+	<CandRItem title="On Earth We're Briefly Gorgeous" author="Ocean Vuong">
 		<h3>i</h3>
 
 		<p>Tell me it was for the hunger
@@ -54,5 +60,9 @@ import CandRLayout from '../../layouts/CandR.astro';
 		<br />only to be left
 		<br />&#160 &#160 &#160 &#160 &#160 &#160 with yourself —
 		<br />stay.</p>
+
+		<CandRBio>
+			This is a bio
+		</CandRBio>
 	</CandRItem>
 </CandRLayout>

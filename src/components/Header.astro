@@ -5,23 +5,30 @@ import { SITE_TITLE } from '../config';
 
 <header>
 	<h2>
-		{SITE_TITLE}
+		
 	</h2>
 	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
+		{SITE_TITLE}
+		<!-- <HeaderLink href="/">Home</HeaderLink> -->
 		<HeaderLink href="/callandresponse">Call and Response</HeaderLink>
-		<HeaderLink href="/blog">Blog thing</HeaderLink>		
+<!-- 		<HeaderLink href="/blog">Blog thing</HeaderLink>		
 		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="/astrostuff">Astro stuff</HeaderLink>		
+		<HeaderLink href="/astrostuff">Astro stuff</HeaderLink>		 -->
 </header>
 <style>
 	header {
+		background: #fff;
+		font-size: 14px;
+		height: 40px;
 		margin: 0em auto 2em;
-		max-width: 600px;
+		position: fixed;
 		text-align: center;
+		top: 0;
+		width: 100%;
 	}
 	h2 {
 		margin: 0.5em 0;
+		font-size: 14px;
 		font-weight: 300;
 	}
 </style>

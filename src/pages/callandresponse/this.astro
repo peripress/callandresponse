@@ -3,27 +3,42 @@ import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 import CandRItem from '../../components/CandRItem.astro';
+import CandRHeader from '../../components/CandRHeader.astro';
 import CandRBio from '../../components/CandRBio.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
 import CandRLayout from '../../layouts/CandRPost.astro';
 ---
 
+
+<!-- 1. fill 'nextup' with the url name of the next pair -->
 <CandRLayout nextup="candrsample">
 
-	<CandRItem title="After Chief Keef’s Interview on Hiding Pain with Silence" author="Serenity Hughes">
-		
-		<img src="../CandRImages/Serenity1.jpg" />
-		<img src="../CandRImages/Serenity2.jpg" />
-		<img src="../CandRImages/Serenity3.jpg" />
-		<img src="../CandRImages/Serenity4.jpg" />
-		<img src="../CandRImages/Serenity5.jpg" />
 
-		<CandRBio>
-			This is a bio
-		</CandRBio>
-	</CandRItem>
+<!-- 2. fill 'titleCall', 'authorCall'; 'titleResponse', 'authorResponse' with the authors and titles -->
 
-<CandRItem title="Celestial Sunchoke" author="Jonah Wu">
+<CandRHeader 
+	titleCall="After Chief Keef’s Interview on Hiding Pain with Silence" authorCall="Serenity Hughes"
+	titleResponse="Celestial Sunchoke" authorResponse="Jonah Wu">			
+</CandRHeader>
+
+
+<!-- 3. This is the call! Fill out the 'title' and 'author' (leave the id as is) -->
+<CandRItem id="call" title="After Chief Keef’s Interview on Hiding Pain with Silence" author="Serenity Hughes">
+	
+	<img src="../CandRImages/Serenity1.jpg" />
+	<img src="../CandRImages/Serenity2.jpg" />
+	<img src="../CandRImages/Serenity3.jpg" />
+	<img src="../CandRImages/Serenity4.jpg" />
+	<img src="../CandRImages/Serenity5.jpg" />
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+</CandRItem>
+
+		<hr />
+
+<CandRItem id="response" title="Celestial Sunchoke" author="Jonah Wu">
 		<p>	On the day of my father’s death, I spoke to his ghost.</p>
 		<p>I bring this up now because it’s sunset, and I’m watching the pink-orange light streak across L.A. as my bus razors a route through it. Hollywood calls this golden hour, but to me, it’s always been the haunting hour — it’s the time of day when ghosts spill out of whatever uncanny nook they’ve been hiding in and flood my senses. I can never see them, and I rarely if ever hear them speak. Rather, it’s that when the sun meets the horizon line, a door opens, and suddenly rushes in the wordless stream of their emotions.</p>
 		<p>Sometimes they want very little. Sometimes they just want someone to know that they are here, that they were once alive, before they travel once again into the darkness. Sometimes they stay for a while, projecting all of their past regrets, their aborted desires, their sorrows. If they disappear, it means someone they love has collected them, and maybe they’re able to move onto that other world. But my father, he still lingers. Behind me, over my shoulder, in the shadow of my step. I am not someone he loves. Our last conversation while he was still alive, three years before he passed, was an argument about — of course — my queerness. And then, when he died, he came through the door for me. To see me, I guess. Where I’d ended up.</p>

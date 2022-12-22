@@ -28,12 +28,16 @@ const {nextup} = Astro.props;
 	</head>
 	<body>
 		<Header />
+
+
+		
 		<main>
 			<div class="candrcontainer">
 
 				<slot />
 
 			</div>
+		<hr />
 		</main>
 		<div class="next">
 			<a href={nextup}>Next Pair</a>

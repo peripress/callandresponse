@@ -1,0 +1,70 @@
+---
+import '../styles/global.css';
+
+const {titleCall} = Astro.props;
+const {authorCall} = Astro.props;
+const {titleResponse} = Astro.props;
+const {authorResponse} = Astro.props;
+
+
+---
+
+	<div class="CandRHeader">
+		<div class="left">
+			<h3><a href="#call">Call ･:*:･ﾟ {authorCall}</a></h3>
+			<h1>{titleCall}</h1>
+		</div>
+		<div class="right">
+			<h3><a href="#response">Response ･:*:･ﾟ {authorResponse}</a></h3>
+			<h1>{titleResponse}</h1>
+		</div>
+	</div>
+
+
+<style>
+
+.CandRHeader {
+	align-content: center;
+	background: #851616;
+	display: flex;
+	position: fixed;
+	top: 40px;
+	width: 100%;
+}
+
+.CandRHeader div {
+	padding: 12px 24px;
+	text-align: center;
+	width: 50%;
+}
+
+.left {
+	border-right: 1px solid #fff;
+}
+
+h1, h3, h4 {
+	color: #FF8BF3;
+	margin: 0;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 21px;
+}
+
+h3 {
+	font-size: 14px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+h3 a {
+	color: #fff;
+	opacity: .7;
+	text-decoration: none;
+}
+
+</style>

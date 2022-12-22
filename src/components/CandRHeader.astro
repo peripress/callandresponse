@@ -12,11 +12,11 @@ const {authorResponse} = Astro.props;
 	<div class="CandRHeader">
 		<div class="left">
 			<h3><a href="#call">Call ･:*:･ﾟ {authorCall}</a></h3>
-			<h1>{titleCall}</h1>
+			<h1><a href="#call">{titleCall}</a></h1>
 		</div>
 		<div class="right">
 			<h3><a href="#response">Response ･:*:･ﾟ {authorResponse}</a></h3>
-			<h1>{titleResponse}</h1>
+			<h1><a href="#response">{titleResponse}</a></h1>
 		</div>
 	</div>
 
@@ -30,6 +30,7 @@ const {authorResponse} = Astro.props;
 	position: fixed;
 	top: 40px;
 	width: 100%;
+	z-index: 10000;
 }
 
 .CandRHeader div {
@@ -39,16 +40,13 @@ const {authorResponse} = Astro.props;
 }
 
 .left {
-	border-right: 1px solid #fff;
+	border-right: 1px solid #FF8BF3;
+
 }
 
-h1, h3, h4 {
+h1, h3 {
 	color: #FF8BF3;
 	margin: 0;
-}
-
-h4 {
-	font-size: 16px;
 }
 
 h1 {
@@ -56,7 +54,7 @@ h1 {
 }
 
 h3 {
-	font-size: 14px;
+	font-size: 13px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
@@ -64,6 +62,11 @@ h3 {
 h3 a {
 	color: #fff;
 	opacity: .7;
+	text-decoration: none;
+}
+
+h1 a {
+	color: #FF8BF3;
 	text-decoration: none;
 }
 

@@ -13,7 +13,7 @@ body {
 	background-color: #fff;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
-	line-height: 1.65;
+	line-height: 1.7;
 	color: #444;
 }
 h1,
@@ -31,7 +31,14 @@ h1, h3, h4 {
 	font-weight: 200;
 }
 
-h3 {	text-transform: uppercase;}
+h1 {
+	font-size: 46px;
+}
+
+h3 {	
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
 a {
 	color: #3273dc;
 }
@@ -77,14 +84,12 @@ main {
 	margin-top: 200px;
 }
 
-
-.candrcontainer {
-/* 	display: flex;*/
-}
-
-.candritem {
-	margin: 0 auto;
-	padding: 120px 32px 32px;
-	max-width: 700px;
+hr {
+	border: none;
+	background-color: #FF8BF3;
+	color: #FF8BF3;
+  height: 1px;
+  margin: 48px auto;
+  opacity: .5;
 }
 

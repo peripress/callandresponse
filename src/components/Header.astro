@@ -4,30 +4,31 @@ import { SITE_TITLE } from '../config';
 ---
 
 <header>
-	<h2>
-		
-	</h2>
 	<nav>
-		{SITE_TITLE}
+		<h1 class="tiny">{SITE_TITLE}</h1>
 		<!-- <HeaderLink href="/">Home</HeaderLink> -->
-		<HeaderLink href="/callandresponse">Call and Response</HeaderLink>
+		<HeaderLink href="/callandresponse">Anthology I: Call and Response</HeaderLink>
 <!-- 		<HeaderLink href="/blog">Blog thing</HeaderLink>		
 		<HeaderLink href="/about">About</HeaderLink>
 		<HeaderLink href="/astrostuff">Astro stuff</HeaderLink>		 -->
+	</nav>
 </header>
 <style>
 	header {
 		background: #fff;
 		font-size: 14px;
 		height: 40px;
-		margin: 0em auto 2em;
+		margin: 0 0;
+		padding: 8px 0;
 		position: fixed;
-		text-align: center;
+		text-align: left;
 		top: 0;
 		width: 100%;
 	}
-	h2 {
-		margin: 0.5em 0;
+	h1 {
+		color: #202C4A;
+		display: inline;
+		margin: 2px 24px;
 		font-size: 14px;
 		font-weight: 300;
 	}

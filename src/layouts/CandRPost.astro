@@ -24,6 +24,11 @@ const {nextup} = Astro.props;
 				padding: 24px;
 				text-align: center;
 			}
+			#call {
+				background-color: #888;
+			}
+
+
 		</style>
 	</head>
 	<body>
@@ -37,7 +42,6 @@ const {nextup} = Astro.props;
 				<slot />
 
 			</div>
-		<hr />
 		</main>
 		<div class="next">
 			<a href={nextup}>Next Pair</a>

@@ -11,11 +11,11 @@ const {authorResponse} = Astro.props;
 
 	<div class="CandRHeader">
 		<div class="left">
-			<h3><a href="#call">Call ･:*:･ﾟ {authorCall}</a></h3>
+			<h3 class="tiny"><a href="#call">Call  △  {authorCall}</a></h3>
 			<h1><a href="#call">{titleCall}</a></h1>
 		</div>
 		<div class="right">
-			<h3><a href="#response">Response ･:*:･ﾟ {authorResponse}</a></h3>
+			<h3 class="tiny"><a href="#response">Response  ○  {authorResponse}</a></h3>
 			<h1><a href="#response">{titleResponse}</a></h1>
 		</div>
 	</div>
@@ -35,28 +35,27 @@ const {authorResponse} = Astro.props;
 
 .CandRHeader div {
 	padding: 12px 24px;
-	text-align: center;
+	text-align: left;
 	width: 50%;
 }
 
 .left {
-	border-right: 1px solid #FF8BF3;
+	background-color: #ff634f;
+	border-right: 1px solid #fff;
 
 }
 
+.right {
+	background-color: #202C4A;
+}
+
 h1, h3 {
-	color: #FF8BF3;
 	margin: 0;
 }
 
 h1 {
 	font-size: 21px;
-}
-
-h3 {
-	font-size: 13px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+	margin-top: 6px;
 }
 
 h3 a {
@@ -66,8 +65,27 @@ h3 a {
 }
 
 h1 a {
-	color: #FF8BF3;
 	text-decoration: none;
+}
+
+.left a {
+	color: #240600;
+}
+
+.right a {
+	color: #36CDFD;
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+	h1 {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	h1 {
+		display: none;
+	}
 }
 
 </style>

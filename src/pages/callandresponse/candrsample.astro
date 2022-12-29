@@ -2,15 +2,27 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
+import CandRHeader from '../../components/CandRHeader.astro';
 import CandRItem from '../../components/CandRItem.astro';
 import CandRBio from '../../components/CandRBio.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../config';
 import CandRLayout from '../../layouts/CandRPost.astro';
+
+const titleCall = "We Wanted More";
+const authorCall = "Justin Torres";
+const titleResponse = "On Earth We're Briefly Gorgeous";
+const authorResponse = "Ocean Vuong";
+
 ---
 
 <CandRLayout nextup="#">
 
-	<CandRItem title="We Wanted More" author="Justin Torres">
+	<CandRHeader 
+		titleCall={titleCall} authorCall={authorCall}
+		titleResponse={titleResponse} authorResponse={authorResponse}>			
+	</CandRHeader>
+
+	<CandRItem id="call" title={titleCall} author={authorCall}>
 		<p>We wanted more. We knocked the butt ends of our forks against the table, tapped our spoons against our empty bowls; we were hungry. We wanted more volume, more riots. We turned up the knob on the TV until our ears ached with the shouts of angry men. We wanted more music on the radio; we wanted beats; we wanted rock. We wanted muscles on our skinny arms. We had bird bones, hollow and light, and we wanted more density, more weight. We were six snatching hands, six stomping feet; we were brothers, boys, three little kings locked in a feud for more.</p>
 
 		<p>When it was cold, we fought over blankets until the cloth tore down the middle. When it was really cold, when our breath came out in frosty clouds, Manny crawled into bed with Joel and me.</p>
@@ -36,7 +48,7 @@ import CandRLayout from '../../layouts/CandRPost.astro';
 		</CandRBio>
 	</CandRItem>
 
-	<CandRItem title="On Earth We're Briefly Gorgeous" author="Ocean Vuong">
+	<CandRItem id="response" title={titleResponse} author={authorResponse}>
 		<h3>i</h3>
 
 		<p>Tell me it was for the hunger

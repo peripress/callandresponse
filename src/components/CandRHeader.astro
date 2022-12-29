@@ -11,11 +11,11 @@ const {authorResponse} = Astro.props;
 
 	<div class="CandRHeader">
 		<div class="left">
-			<h3 class="tiny"><a href="#call">Call  △  {authorCall}</a></h3>
+			<h3 class="tiny"><a href="#call"><span class="tinysentencecase">Call</span> {authorCall}</a></h3>
 			<h1><a href="#call">{titleCall}</a></h1>
 		</div>
 		<div class="right">
-			<h3 class="tiny"><a href="#response">Response  ○  {authorResponse}</a></h3>
+			<h3 class="tiny"><a href="#response"><span class="tinysentencecase">Response</span> {authorResponse}</a></h3>
 			<h1><a href="#response">{titleResponse}</a></h1>
 		</div>
 	</div>
@@ -64,6 +64,10 @@ h3 a {
 	text-decoration: none;
 }
 
+h3 span {
+	margin-right: 8px;
+}
+
 h1 a {
 	text-decoration: none;
 }
@@ -85,6 +89,10 @@ h1 a {
 @media screen and (max-width: 480px) {
 	h1 {
 		display: none;
+	}
+
+	h3 span {
+		display: block;
 	}
 }
 

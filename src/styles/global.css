@@ -100,6 +100,12 @@ hr {
 	text-transform: uppercase;
 }
 
+.tinysentencecase {
+	font-size: 14px;
+	font-weight: 200;
+	text-transform: none;
+	letter-spacing: 0;
+}
 
 @media screen and (max-width: 480px) {
 

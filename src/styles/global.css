@@ -1,3 +1,20 @@
+:root {
+	--color-text: #444;
+	--color-header: #222;
+	--color-bg: #fff;
+	--size-h1: 46px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--color-text: #ddd;
+		--color-header: #fff;
+		--color-bg: #000;
+		-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	}
+}
+
 /*
   The CSS in this style tag is based off of Bear Blog's default CSS.
   https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
@@ -10,11 +27,11 @@ body {
 	margin: auto;
 	padding: 0;
 	text-align: left;
-	background-color: #fff;
+	background-color: var(--color-bg);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.7;
-	color: #444;
+	color: var(--color-text);
 }
 h1,
 h2,
@@ -24,7 +41,7 @@ h5,
 h6,
 strong,
 b {
-	color: #222;
+	color: var(--color-header);
 }
 
 h1, h3, h4 {
@@ -32,10 +49,10 @@ h1, h3, h4 {
 }
 
 h1 {
-	font-size: 46px;
+	font-size: var(--size-h1);
 }
 
-h3 {	
+h3 {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
@@ -73,8 +90,7 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	border: 1px solid #999;
-	color: #222;
+	color: var(--color-header);
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
 	font-style: italic;
@@ -107,10 +123,10 @@ hr {
 	letter-spacing: 0;
 }
 
-@media screen and (max-width: 480px) {
 
-	h1 {
-		font-size: 36px;
+@media screen and (max-width: 480px) {
+	:root {
+		--size-h1: 36px;
 	}
 
 	h3 {

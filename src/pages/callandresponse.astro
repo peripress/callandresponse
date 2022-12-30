@@ -4,6 +4,10 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
+	(a, b) => {return a.frontmatter.order-b.frontmatter.order} 
+);
 ---
 
 <!DOCTYPE html>
@@ -35,8 +39,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 				<p>[a pgh about the project, process, vision...]</p>
 
 				<ul>
-					<li><a href="/candr/candrsample" >test</a></li>
-					<li><a href="/candr/this" >test2</a></li>
+					{posts.map((post) => (
+						<li><a href={post.url}>{post.frontmatter.callauthor} and {post.frontmatter.responseauthor} </a></li>
+					))}
 				</ul>
 
 			</section>

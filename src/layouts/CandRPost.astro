@@ -2,11 +2,23 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import CandRLeft from '../components/CandRLeft.astro';
-import CandRRight from '../components/CandRRight.astro';
+import CandRHeader from '../components/CandRHeader.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
-const {nextup} = Astro.props;
+export interface Props {
+	content: {
+		nextpairurl: string;
+		calltitle: string;
+		callauthor: string;
+		responsetitle: string;
+		responseauthor: string;
+
+	};
+}
+
+const {
+	content: { nextpairurl, calltitle, callauthor, responsetitle, responseauthor },
+} = Astro.props;
 
 ---
 
@@ -39,12 +51,18 @@ const {nextup} = Astro.props;
 		<main>
 			<div class="candrcontainer">
 
+			<CandRHeader 
+				titleCall={calltitle} authorCall={callauthor}
+				titleResponse={responsetitle} authorResponse={responseauthor}>			
+			</CandRHeader>
+
 				<slot />
 
 			</div>
 		</main>
+		<hr />
 		<div class="next">
-			<a href={nextup}>Next Pair</a>
+			<a href={nextpairurl}>Next Pair</a>
 		</div>
 		<Footer />
 	</body>

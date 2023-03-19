@@ -1,15 +1,20 @@
 :root {
 	--color-text: #444;
 	--color-header: #222;
-	--color-bg: #fff;
+	--main-bg: #fff;
+	--color-bg: rgb(161,0,68);
+	--bg-gradient: linear-gradient(135deg, rgba(161,0,68,1) 0%, rgba(19,0,138,1) 100%);;
 	--size-h1: 46px;
+	--size-h2: 24px;
+	--color-sun: #F19F00;
+	--color-moon: #7FAFCA;
 }
 
 @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--color-text: #ddd;
 		--color-header: #fff;
-		--color-bg: #000;
+		--main-bg: #000;		
 		-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	}
@@ -28,6 +33,7 @@ body {
 	padding: 0;
 	text-align: left;
 	background-color: var(--color-bg);
+	background: var(--bg-gradient) fixed;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.7;
@@ -50,6 +56,11 @@ h1, h3, h4 {
 
 h1 {
 	font-size: var(--size-h1);
+}
+
+h2 {
+	font-size: var(--size-h2);
+	font-weight: 400;
 }
 
 h3 {
@@ -97,16 +108,26 @@ blockquote {
 }
 
 main {
-	margin-top: 200px;
+	border-radius: 6px;
+	margin: 100px 36px 0;
+	padding: 24px;
+}
+
+section {
+	background: #fff;
+	border-radius: 6px;	
+	padding: 24px;
+	margin-bottom: 36px;
 }
 
 hr {
 	border: none;
-	background: linear-gradient(63deg, rgba(255,99,79,1) 0%, rgba(54,205,253,1) 100%);
+	background: linear-gradient(63deg, var(--color-sun) 0%, var(--color-moon) 100%);
 	color: #ddd;
   height: 1px;
   margin: 48px auto;
   opacity: .5;
+  width: 100%;
 }
 
 .tiny {

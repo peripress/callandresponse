@@ -12,10 +12,80 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 	</head>
 	<body>
 		<Header title={SITE_TITLE} />
+		<img src="/CandRImages/CandRlogo.svg" />
+		<img id="gradientbkg" src="/CandRImages/blurs.svg" />
 		<main>
-			<h1>Hello world</h1>
-			<p>[Main info about Periplus, maybe some linkies]</p>
+			<p>On July 14th, 2022, we sent out the following email to the Periplus Collectives ‘21 and ‘22, mentors and mentees alike…</p>
+
+<blockquote>Hi Friends,
+
+It’s exciting to gather with you all to produce this collective work!
+
+<br /><br />Call and Response is both the theme and form of the first PeriPress Anthology, which works to invite collective-making, mutuality, and co-creation. How can we draw upon a longer, richer history of storytelling such as the musical form rooted in African-American spirituals, Jazz, and the oral forms our ancestors used? How can we read each other deeply and honestly, while simultaneously welcoming a spirit of playfulness?
+
+<br /><br />With this in mind, each person has been paired with another to capture this energy. One person has been designated to “call” and the other person to “respond” to that work, either directly or indirectly, whatever that means to you. Since many of us work across form, we encourage cross-form pairs (fiction answered by essay, a poem answered by visual work, etc,) as we are looking to be expansive in scope.
+
+<br /><br />Some of you may know what you want to contribute, others may feel a bit more open or unsure. Some thought-starters to build off of: what do you want to capture in this moment? What has been obsessing you? What questions, emotions, thoughts do you want to see reflections of? What do you want to echo? What would you produce if you had no bounds? </blockquote>
+
+<p>What emerged from the loving enthusiasm of the Periplus collective, a bit of badgering and web design (thank you Ash!) was a lot of magic. </p>
+
+<p>This Call and Response anthology is an experiment in co-creation, in making together and for each other. </p>
+
+
+<p>Love, 
+<br />Ash Huang
+<br />Elina Zhang
+<br />Giovannai Rosa
+<br />Jonah Wu</p>
+
+<p>With support from,
+<br />Anes Ahmed
+<br />Sagnik Gayen
+<br />Vauhini Vara
+<br />Amy Zhang</p>
+
+
+
+
 		</main>
 		<Footer />
 	</body>
 </html>
+
+
+<style>
+	img {
+		display: block;
+		margin: 200px auto 0;
+		text-align: center;
+		z-index: 1000;
+	}
+	img#gradientbkg {
+		position: fixed;
+		min-width: 600px;
+		width: 100%;
+		top: 0;
+		margin: 0;
+		opacity:;
+		z-index: -1000;
+	}
+	main {
+		max-width: 800px;
+		margin: 100px auto 100px;
+	}
+
+	p, blockquote {
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	blockquote {
+		background: #eee;
+		padding: 36px;
+	}
+
+	header {
+		position: relative;
+	}
+</style>

@@ -25,10 +25,10 @@ const {authorResponse} = Astro.props;
 
 .CandRHeader {
 	align-content: center;
-	background: #851616;
+/*	background: #851616;*/
 	display: flex;
 	position: fixed;
-	top: 40px;
+	top: 30px;
 	width: 100%;
 	z-index: 10000;
 	-webkit-font-smoothing: auto;
@@ -42,13 +42,13 @@ const {authorResponse} = Astro.props;
 }
 
 .left {
-	background-color: #ff634f;
-	border-right: 1px solid var(--color-bg);
+/*	background-color: #ff634f;*/
+/*	border-right: 1px solid var(--color-bg);*/
 
 }
 
 .right {
-	background-color: #202C4A;
+/*	background-color: #202C4A;*/
 }
 
 .CandRHeader h1, h3 {
@@ -75,11 +75,11 @@ h3 span {
 }
 
 .left a {
-	color: #240600;
+	color: var(--color-sun);
 }
 
 .right a {
-	color: #36CDFD;
+	color: var(--color-moon);
 }
 
 @media screen and (min-width: 481px) and (max-width: 720px) {

@@ -5,7 +5,7 @@ import { SITE_TITLE } from '../config';
 
 <header>
 	<nav>
-		<h1 class="tiny">{SITE_TITLE}</h1>
+		<h1 class="tinysentencecase">{SITE_TITLE}</h1>
 		<!-- <HeaderLink href="/">Home</HeaderLink> -->
 		<HeaderLink href="/callandresponse">I: Call and Response</HeaderLink>
 <!-- 		<HeaderLink href="/blog">Blog thing</HeaderLink>		
@@ -15,21 +15,24 @@ import { SITE_TITLE } from '../config';
 </header>
 <style>
 	header {
-		background: var(--color-bg);
+/*		background: var(--color-bg);*/
 		font-size: 14px;
 		height: 40px;
 		margin: 0 0;
 		padding: 8px 0;
 		position: fixed;
-		text-align: left;
+		text-align: center;
 		top: 0;
 		width: 100%;
 	}
 	h1 {
-		color: var(--color-header);
+		color: var(--main-bg);
 		display: inline;
 		margin: 2px 24px;
 		font-size: 14px;
 		font-weight: 300;
+	}
+	a {
+		color: var(--main-bg);
 	}
 </style>

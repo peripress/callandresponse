@@ -1,0 +1,36 @@
+---
+layout: "../../layouts/CandRPost.astro"
+order: 7
+title: "N.S. Ahmed and Jenzo DuQue"
+callauthor: "N.S. Ahmed"
+calltitle: "X"
+responseauthor: "Jenzo DuQue"
+responsetitle: "Y"
+---
+
+import CandRItem from '../../components/CandRItem.astro';
+import CandRBio from '../../components/CandRBio.astro';
+
+<CandRItem id="call" title={frontmatter.calltitle} author={frontmatter.callauthor}>
+
+	TEXT
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>
+
+---
+
+<CandRItem id="response" title={frontmatter.responsetitle} author={frontmatter.responseauthor}>
+
+
+	TEXT
+
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>

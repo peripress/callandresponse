@@ -1,0 +1,36 @@
+---
+layout: "../../layouts/CandRPost.astro"
+order: 8
+title: "J.C. Rodriguez and Erica Rawles"
+callauthor: "J.C. Rodriguez"
+calltitle: "X"
+responseauthor: "Erica Rawles"
+responsetitle: "Y"
+---
+
+import CandRItem from '../../components/CandRItem.astro';
+import CandRBio from '../../components/CandRBio.astro';
+
+<CandRItem id="call" title={frontmatter.calltitle} author={frontmatter.callauthor}>
+
+	TEXT
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>
+
+---
+
+<CandRItem id="response" title={frontmatter.responsetitle} author={frontmatter.responseauthor}>
+
+
+	TEXT
+
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>

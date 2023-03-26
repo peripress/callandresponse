@@ -1,0 +1,36 @@
+---
+layout: "../../layouts/CandRPost.astro"
+order: 15
+title: "Susan Kikuchi and george sánchez-tello"
+callauthor: "Susan Kikuchi"
+calltitle: "X"
+responseauthor: "george b. sanchez-tello"
+responsetitle: "Y"
+---
+
+import CandRItem from '../../components/CandRItem.astro';
+import CandRBio from '../../components/CandRBio.astro';
+
+<CandRItem id="call" title={frontmatter.calltitle} author={frontmatter.callauthor}>
+
+	TEXT
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>
+
+---
+
+<CandRItem id="response" title={frontmatter.responsetitle} author={frontmatter.responseauthor}>
+
+
+	TEXT
+
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>

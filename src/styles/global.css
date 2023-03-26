@@ -1,20 +1,23 @@
 :root {
 	--color-text: #444;
+	--color-text-light: #ccc;
 	--color-header: #222;
-	--main-bg: #fff;
-	--color-bg: rgb(161,0,68);
+	--main-bg: rgba(255,255,255,.9);
+	--color-bg: rgba(30,30,80,.7);
+	--chill-bg: rgba(255,255,255,.3);
 	--bg-gradient: linear-gradient(135deg, rgba(161,0,68,1) 0%, rgba(19,0,138,1) 100%);;
 	--size-h1: 46px;
 	--size-h2: 24px;
-	--color-sun: #F19F00;
-	--color-moon: #7FAFCA;
+	--color-sun: #EA9705;
+	--color-moon: #6BD2E0;
 }
 
 @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--color-text: #ddd;
+		--color-text-light: #444;
 		--color-header: #fff;
-		--main-bg: #000;		
+		--main-bg: rgba(0,0,0,.9);		
 		-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	}
@@ -101,11 +104,12 @@ pre > code {
 	all: unset;
 }
 blockquote {
+	background-color: var(--color-bg);
 	color: var(--color-header);
 	padding: 2px 0px 2px 20px;
 	margin: 0px;
-	font-style: italic;
-}
+	font-family: sans-serif;
+	}
 
 main {
 	border-radius: 6px;
@@ -114,7 +118,7 @@ main {
 }
 
 section {
-	background: #fff;
+	background: var(--main-bg);
 	border-radius: 6px;	
 	padding: 24px;
 	margin-bottom: 36px;
@@ -138,7 +142,7 @@ hr {
 }
 
 .tinysentencecase {
-	font-size: 14px;
+	font-size: 12px;
 	font-weight: 200;
 	text-transform: none;
 	letter-spacing: 0;

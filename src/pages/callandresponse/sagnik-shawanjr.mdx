@@ -1,0 +1,36 @@
+---
+layout: "../../layouts/CandRPost.astro"
+order: 4
+title: "Sagnik and Nicole Shawan Junior"
+callauthor: "Sagnik"
+calltitle: "X"
+responseauthor: "Nicole Shawan Junior"
+responsetitle: "Y"
+---
+
+import CandRItem from '../../components/CandRItem.astro';
+import CandRBio from '../../components/CandRBio.astro';
+
+<CandRItem id="call" title={frontmatter.calltitle} author={frontmatter.callauthor}>
+
+	TEXT
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>
+
+---
+
+<CandRItem id="response" title={frontmatter.responsetitle} author={frontmatter.responseauthor}>
+
+
+	TEXT
+
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>

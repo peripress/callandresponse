@@ -33,10 +33,22 @@ const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
 		</style>
 	</head>
 	<body>
-		<Header />
-		<img src="/CandRImages/CandRlogo.svg" />
+		<!-- <Header /> -->
+		<h2>Periplus Press</h2>
+		<img id="candrlogo" src="/CandRImages/CandRlogo.svg" />
 		<img id="gradientbkg" src="/CandRImages/blurs.svg" />
 		<main>
+			<section id="authors">
+				<h2 class="tiny">Featuring</h2>
+				<ul>
+					{posts.map((post) => (
+						<li class="tinysentencecase"><a href={post.url}><span class="sun">{post.frontmatter.callauthor} | {post.frontmatter.calltitle}</span> · <span class="moon">{post.frontmatter.responseauthor} | {post.frontmatter.responsetitle}</span> </a></li>
+					))}
+				</ul>
+
+			</section>
+
+
 			<section>
 			<p>On July 14th, 2022, we sent out the following email to the Periplus Collectives ‘21 and ‘22, mentors and mentees alike…</p>
 
@@ -67,27 +79,53 @@ const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
 			<br />Vauhini Vara
 			<br />Amy Zhang</p>
 
-			</section>
-
-			<section>
-				<h2>Pieces</h2>
-				<ul>
-					{posts.map((post) => (
-						<li><a href={post.url}>{post.frontmatter.callauthor} and {post.frontmatter.responseauthor} </a></li>
-					))}
-				</ul>
+			<Footer />
 
 			</section>
+
+
 		</main>
-		<Footer />
+		
 	</body>
 </html>
 
 
 <style>
+	h2 {
+		color: var(--main-bg);
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+	}
+	#authors {
+		background-color: var(--color-bg);
+		text-align: center;
+	}
+	#authors a {
+		color: var(--color-text-light);
+		text-decoration: none;
+	}
+	#authors a:hover {
+		text-decoration: underline;
+	}
+	#authors a span.sun{
+		color: var(--color-sun);
+	}
+	#authors a span.moon{
+		color: var(--color-moon);
+	}
+	#authors ul {
+		text-align: center;
+	}
+	#authors li {
+		display: block;
+		margin: 3px 24px;
+		font-size: 18px;
+		text-align: center;
+	}
 	img {
 		display: block;
-		margin: 120px auto 0;
+		margin: 90px auto 0;
 		text-align: center;
 		z-index: 1000;
 	}
@@ -96,7 +134,7 @@ const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
 		min-width: 600px;
 		width: 100%;
 		top: 0;
-		margin: 0;
+		margin: 0 auto;
 		opacity:;
 		z-index: -1000;
 	}
@@ -112,11 +150,19 @@ const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
 	}
 
 	blockquote {
-		background: #eee;
 		padding: 36px;
 	}
 
 	header {
 		position: relative;
+	}
+
+	@media screen and (max-width: 480px) {
+		img {
+			width: 90%;
+		}
+		img#gradientbkg {
+			vertical-align: middle;
+		}
 	}
 </style>

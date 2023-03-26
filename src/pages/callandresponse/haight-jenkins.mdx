@@ -1,0 +1,36 @@
+---
+layout: "../../layouts/CandRPost.astro"
+order: 22
+title: "Ebony Haight and Ralph Jenkins"
+callauthor: "Ebony Haight"
+calltitle: "X"
+responseauthor: "Ralph Jenkins"
+responsetitle: "Y"
+---
+
+import CandRItem from '../../components/CandRItem.astro';
+import CandRBio from '../../components/CandRBio.astro';
+
+<CandRItem id="call" title={frontmatter.calltitle} author={frontmatter.callauthor}>
+
+	TEXT
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>
+
+---
+
+<CandRItem id="response" title={frontmatter.responsetitle} author={frontmatter.responseauthor}>
+
+
+	TEXT
+
+
+	<CandRBio>
+		This is a bio
+	</CandRBio>
+
+</CandRItem>

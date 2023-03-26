@@ -31,11 +31,11 @@ const {
 				max-width: 100%;
 			}
 
-			.next {
+/*			.next {
 				margin: 0 auto;
 				padding: 24px;
 				text-align: center;
-			}
+			}*/
 			#call {
 				background-color: #888;
 			}
@@ -45,10 +45,21 @@ const {
 				padding: 0;
 				position: fixed;
 				overflow-y: scroll;
-				top: 24px;
-				left: 0;
-				right: 0;
-				bottom: 36px;
+				margin: 0;
+				top: 120px;
+				left: 24px;
+				right: 24px;
+				bottom: 24px;
+			}
+
+			@media screen and (max-width: 480px) {
+
+				main {
+					left: 12px;
+					right: 12px;
+					bottom: 12px;
+				}
+
 			}
 
 
@@ -70,11 +81,15 @@ const {
 				<slot />
 
 			</div>
+
+			<div class="next">
+				<!-- <a href={nextpairurl}>Next Pair</a> -->
+			</div>
+
+			<Footer />
 		</main>
-		<hr />
-		<div class="next">
-			<a href={nextpairurl}>Next Pair</a>
-		</div>
-		<Footer />
+
+
+
 	</body>
 </html>

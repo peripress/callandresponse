@@ -2,14 +2,15 @@
 	--color-text: #444;
 	--color-text-light: #ccc;
 	--color-header: #222;
-	--main-bg: rgba(255,255,255,.9);
+	--main-bg: rgba(255,255,255,.95);
 	--color-bg: rgba(30,30,80,.7);
-	--chill-bg: rgba(255,255,255,.3);
-	--bg-gradient: linear-gradient(135deg, rgba(161,0,68,1) 0%, rgba(19,0,138,1) 100%);;
+	--chill-bg: rgba(30,30,80,.05);
+	--color-sun: #EA9705;
+	--color-moon: #6BD2E0;	
+	--bg-gradient: linear-gradient(135deg, rgba(161,0,68,1) 0%, rgba(19,0,138,1) 100%);
+	--bg-gradient-light: linear-gradient(135deg, var(--color-sun) 0%, var(--color-moon) 100%);
 	--size-h1: 46px;
 	--size-h2: 24px;
-	--color-sun: #EA9705;
-	--color-moon: #6BD2E0;
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -17,7 +18,8 @@
 		--color-text: #ddd;
 		--color-text-light: #444;
 		--color-header: #fff;
-		--main-bg: rgba(0,0,0,.9);		
+		--main-bg: rgba(0,0,0,.9);	
+		--chill-bg: rgba(255,255,255,.3);	
 		-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	}
@@ -71,7 +73,7 @@ h3 {
 	text-transform: uppercase;
 }
 a {
-	color: #3273dc;
+	color: var(--color-bg);
 }
 nav a {
 	margin-right: 10px;

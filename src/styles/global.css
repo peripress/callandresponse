@@ -5,8 +5,8 @@
 	--main-bg: rgba(255,255,255,.95);
 	--color-bg: rgba(30,30,80,.7);
 	--chill-bg: rgba(30,30,80,.05);
-	--color-sun: #EA9705;
-	--color-moon: #6BD2E0;	
+	--color-sun: #E24646;
+	--color-moon: #4B47AD;	
 	--bg-gradient: linear-gradient(135deg, rgba(161,0,68,1) 0%, rgba(19,0,138,1) 100%);
 	--bg-gradient-light: linear-gradient(135deg, var(--color-sun) 0%, var(--color-moon) 100%);
 	--size-h1: 46px;

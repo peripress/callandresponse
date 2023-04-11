@@ -22,16 +22,10 @@ const {responseadd} = '#response';
 		<img id="candrlogo" src="/CandRImages/CandRlogo.svg" />
 		<img id="gradientbkg" src="/CandRImages/blurs.svg" />
 		<main>
-			<h2>Featuring</h2>
+			<h2 class="indexH2">Featuring</h2>
 			<section id="authors">
 					{posts.map((post) => (
 				<a href={post.url}>					
-<!-- 					<div class="contents">
-							<div class="call">
-								<h3><span class="call">{post.frontmatter.callauthor}</span> → <span class="response">{post.frontmatter.responseauthor}</span></h3>
-								<p>{post.frontmatter.calltitle} → {post.frontmatter.responsetitle}</p>
-							</div>			
-					</div> -->
 					<div class="features">
 						<h3><span class="call">{post.frontmatter.callauthor}</span> → <span class="response">{post.frontmatter.responseauthor}</span></h3>
 						<h4><span class="call">{post.frontmatter.calltitle}</span> → <span class="response">{post.frontmatter.responsetitle}</span></h4>
@@ -88,20 +82,14 @@ const {responseadd} = '#response';
 	section#authors {
 		padding: 0;
 	}
-	h2 {
+	h2.indexH2 {
 		color: var(--main-bg);
 		font-weight: 300;
 		font-size: 18px;
 		text-align: center;
 		padding: 0 24px;
 	}
-	h3 {
-		color: var(--color-text-light);
-		font-family: 'Poppins', sans-serif;
-		font-size: 11px;
-		margin: 12px 0 6px;
-		padding: 0 24px;
-	}
+
 	.features {
 		padding: 12px 0 0;
 		margin: 0 auto;
@@ -109,12 +97,20 @@ const {responseadd} = '#response';
 	}
 	.features hr {
 		margin: 24px 0 0;
+		opacity: .3;
 	}
 	.lastline {
 		height: 1px;
 		background: var(--bg-gradient-light);
 	}
-	h4 {
+	.features h3 {
+		color: var(--color-text-light);
+		font-family: 'Poppins', sans-serif;
+		font-size: 11px;
+		margin: 12px 0 6px;
+		padding: 0 24px;
+	}	
+	.features h4 {
 		color: var(--color-text-light);
 		font-size: 24px;
 		font-family: "Fraunces", serif;

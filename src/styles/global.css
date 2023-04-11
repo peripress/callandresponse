@@ -158,5 +158,8 @@ hr {
 	h3 {
 		font-size: 18px;
 	}
+	main {
+		padding: 12px;
+	}
 
 }

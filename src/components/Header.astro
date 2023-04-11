@@ -5,34 +5,38 @@ import { SITE_TITLE } from '../config';
 
 <header>
 	<nav>
-		<h1 class="tinysentencecase">{SITE_TITLE}</h1>
-		<!-- <HeaderLink href="/">Home</HeaderLink> -->
-		<HeaderLink href="/callandresponse">I: Call and Response</HeaderLink>
-<!-- 		<HeaderLink href="/blog">Blog thing</HeaderLink>		
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="/astrostuff">Astro stuff</HeaderLink>		 -->
+		<h1>{SITE_TITLE}</h1>
+		<div class="HeaderLinkContainer">
+			<HeaderLink href="/callandresponse">I: Call and Response</HeaderLink>
+		</div>
 	</nav>
 </header>
 <style>
 	header {
-/*		background: var(--color-bg);*/
-		font-size: 14px;
-		height: 40px;
+		background: #000;
+		font-size: 13px;
+		height: 24px;
 		margin: 0 0;
-		padding: 8px 0;
+		padding: 8px 24px;
 		position: fixed;
-		text-align: center;
+		text-align: left;
 		top: 0;
 		width: 100%;
+		z-index: 3000;
 	}
 	h1 {
-		color: #fff;
+		color: rgba(255,255,255,.7);
 		display: inline;
 		margin: 2px 24px;
 		font-size: 14px;
 		font-weight: 300;
 	}
-	a {
-		color: var(--main-bg);
+	div.HeaderLinkContainer {
+		position: fixed;
+		margin: 0 auto;
+		top: 9px;
+		left: 0;
+		right: 0;
+		text-align: center;
 	}
 </style>

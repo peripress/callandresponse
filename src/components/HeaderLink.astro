@@ -12,11 +12,18 @@ const isActive = href === Astro.url.pathname.replace(/\/$/, '');
 	a {
 		color: #ff634f;
 		display: inline-block;
-		margin: 0;
+		margin: 0 auto;
 		text-decoration: none;
+		font-family: 'Poppins', sans-serif;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 2px;
 	}
 	a.active {
 		color: var(--main-bg);
+		text-decoration: none;
+	}
+	a:hover {
 		text-decoration: underline;
 	}
 	.tiny {

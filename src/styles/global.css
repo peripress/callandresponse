@@ -149,6 +149,19 @@ hr {
 	letter-spacing: 0;
 }
 
+.rightalign {
+	text-align: right;
+}
+
+.centeralign {
+	text-align: right;
+}
+
+.singlespace p {
+	margin-block-end: 0;
+	margin-block-start: 0;
+}
+
 
 @media screen and (max-width: 480px) {
 	:root {

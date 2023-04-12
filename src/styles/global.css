@@ -1,5 +1,6 @@
 :root {
 	--color-text: #444;
+	--color-text-med: #666;
 	--color-text-light: #ccc;
 	--color-header: #222;
 	--main-bg: rgba(255,255,255,.95);
@@ -7,7 +8,7 @@
 	--chill-bg: rgba(30,30,80,.05);
 	--color-sun: #E24646;
 	--color-moon: #4B47AD;
-	--color-sun-light: #ff9c77;
+	--color-sun-light: #ffa645;
 	--color-moon-light: #aba8ff;
 	--bg-gradient: linear-gradient(135deg, rgba(161,0,68,1) 0%, rgba(19,0,138,1) 100%);
 	--bg-gradient-light: linear-gradient(135deg, var(--color-sun) 0%, var(--color-moon) 100%);
@@ -18,6 +19,7 @@
 @media screen and (prefers-color-scheme: dark) {
 	:root {
 		--color-text: #ddd;
+		--color-text-med: #888;
 		--color-text-light: #444;
 		--color-header: #fff;
 		--main-bg: rgba(0,0,0,.85);	
@@ -108,12 +110,13 @@ pre > code {
 	all: unset;
 }
 blockquote {
-	background-color: var(--color-bg);
-	color: var(--color-header);
-	padding: 2px 0px 2px 20px;
+	background-color: var(--chill-bg);
+	color: var(--color-text-med);
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
 	margin: 0px;
-	font-family: sans-serif;
-	}
+	padding: 36px;
+}
 
 main {
 	border-radius: 6px;
@@ -178,6 +181,10 @@ hr {
 	}
 	body {
 		font-size: 16px;
+	}
+	blockquote {
+		font-size: 14px;
+		padding: 18px;
 	}
 
 

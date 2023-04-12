@@ -3,6 +3,13 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
+	(a, b) => {return a.frontmatter.order-b.frontmatter.order} 
+);
+
+const {responseadd} = '#response';
 ---
 
 <!DOCTYPE html>
@@ -11,20 +18,124 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
 	<body>
+		<Header />
+		<img id="candrlogo" src="/CandRImages/CandRlogo.svg" />
+		<img id="gradientbkg" src="/CandRImages/blurs.svg" />
 		<main>
+			<h2 class="indexH2">Featuring</h2>
+			<section id="authors">
+					{posts.map((post) => (
+				<a href={post.url}>					
+					<div class="features">
+						<h3><span class="call">{post.frontmatter.callauthor}</span> → <span class="response">{post.frontmatter.responseauthor}</span></h3>
+						<h4><span class="call">{post.frontmatter.calltitle}</span> → <span class="response">{post.frontmatter.responsetitle}</span></h4>
+						<hr />	
+					</div>					
+				</a>	
+					))}
 
-			<a href="callandresponse">Call and Response</a>
+			</section>
+
+
+			<section>
+			<p>On July 14th, 2022, we sent out the following email to the Periplus Collectives ‘21 and ‘22, mentors and mentees alike…</p>
+
+			<blockquote>Hi Friends,
+
+			It’s exciting to gather with you all to produce this collective work!
+
+			<br /><br />Call and Response is both the theme and form of the first PeriPress Anthology, which works to invite collective-making, mutuality, and co-creation. How can we draw upon a longer, richer history of storytelling such as the musical form rooted in African-American spirituals, Jazz, and the oral forms our ancestors used? How can we read each other deeply and honestly, while simultaneously welcoming a spirit of playfulness?
+
+			<br /><br />With this in mind, each person has been paired with another to capture this energy. One person has been designated to “call” and the other person to “respond” to that work, either directly or indirectly, whatever that means to you. Since many of us work across form, we encourage cross-form pairs (fiction answered by essay, a poem answered by visual work, etc,) as we are looking to be expansive in scope.
+
+			<br /><br />Some of you may know what you want to contribute, others may feel a bit more open or unsure. Some thought-starters to build off of: what do you want to capture in this moment? What has been obsessing you? What questions, emotions, thoughts do you want to see reflections of? What do you want to echo? What would you produce if you had no bounds? </blockquote>
+
+			<p>What emerged from the loving enthusiasm of the Periplus collective, a bit of badgering and web design (thank you Ash!) was a lot of magic. </p>
+
+			<p>This Call and Response anthology is an experiment in co-creation, in making together and for each other. </p>
+
+
+			<p>Love, 
+			<br />Ash Huang
+			<br />Elina Zhang
+			<br />Giovannai Rosa
+			<br />Jonah Wu</p>
+
+			<p>With support from,
+			<br />Anes Ahmed
+			<br />Sagnik Gayen
+			<br />Vauhini Vara
+			<br />Amy Zhang</p>
+
+			<Footer />
+
+			</section>
+
 
 		</main>
-		<Footer />
+		
 	</body>
 </html>
 
 
 <style>
+	section#authors {
+		padding: 0;
+	}
+	h2.indexH2 {
+		color: var(--main-bg);
+		font-weight: 300;
+		font-size: 18px;
+		text-align: center;
+		padding: 0 24px;
+	}
+
+	.features {
+		padding: 12px 0 0;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.features hr {
+		margin: 24px 0 0;
+		opacity: .3;
+	}
+	.lastline {
+		height: 1px;
+		background: var(--bg-gradient-light);
+	}
+	.features h3 {
+		color: var(--color-text-light);
+		font-family: 'Poppins', sans-serif;
+		font-size: 11px;
+		margin: 12px 0 6px;
+		padding: 0 24px;
+	}	
+	.features h4 {
+		color: var(--color-text-light);
+		font-size: 24px;
+		font-family: "Fraunces", serif;
+		font-weight: 300;
+		max-width: 600px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	span.call {
+		color: var(--color-sun);
+	}
+
+	span.response {
+		color: var(--color-moon);	
+	}
+	a {
+		opacity: .8;
+		text-decoration: none;
+	}
+	a:hover {
+		opacity: 1;
+	}
 	img {
 		display: block;
-		margin: 200px auto 0;
+		margin: 120px auto 0;
 		text-align: center;
 		z-index: 1000;
 	}
@@ -33,13 +144,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 		min-width: 600px;
 		width: 100%;
 		top: 0;
-		margin: 0;
+		margin: 0 auto;
 		opacity:;
 		z-index: -1000;
 	}
 	main {
 		max-width: 800px;
-		margin: 100px auto 100px;
+		margin: 30px auto 100px;
 	}
 
 	p, blockquote {
@@ -49,11 +160,26 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 	}
 
 	blockquote {
-		background: #eee;
+		background-color: var(--chill-bg);
+		color: var(--color-text);
+		font-family: "Poppins", sans-serif;
+		font-size: 14px;
 		padding: 36px;
 	}
 
-	header {
-		position: absolute;
+	#specialname {
+		font-size: 12px;
+
+	}
+
+
+	@media screen and (max-width: 480px) {
+		img {
+			width: 90%;
+		}
+		img#gradientbkg {
+			vertical-align: middle;
+		}
+		
 	}
 </style>

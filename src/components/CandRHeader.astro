@@ -11,11 +11,11 @@ const {authorResponse} = Astro.props;
 
 	<div class="CandRHeader">
 		<div class="left">
-			<h3 class="tiny"><a href="#call"><span class="tinysentencecase">Call</span> {authorCall}</a></h3>
+			<h3 class="tiny"><a href="#call">{authorCall}</a></h3>
 			<h1><a href="#call">{titleCall}</a></h1>
 		</div>
 		<div class="right">
-			<h3 class="tiny"><a href="#response"><span class="tinysentencecase">Response</span> {authorResponse}</a></h3>
+			<h3 class="tiny"><a href="#response">{authorResponse}</a></h3>
 			<h1><a href="#response">{titleResponse}</a></h1>
 		</div>
 	</div>
@@ -25,30 +25,21 @@ const {authorResponse} = Astro.props;
 
 .CandRHeader {
 	align-content: center;
-/*	background: #851616;*/
 	display: flex;
 	position: fixed;
 	top: 40px;
-	width: 100%;
+	left: 0;
+	right: 0;
 	z-index: 10000;
+	overflow: auto;
 	-webkit-font-smoothing: auto;
   	-moz-osx-font-smoothing: auto;
 }
 
 .CandRHeader div {
-	padding: 12px 24px;
+	padding: 12px 6px 24px 24px;
 	text-align: left;
 	width: 50%;
-}
-
-.left {
-/*	background-color: #ff634f;*/
-/*	border-right: 1px solid var(--color-bg);*/
-
-}
-
-.right {
-/*	background-color: #202C4A;*/
 }
 
 .CandRHeader h1, h3 {
@@ -57,7 +48,7 @@ const {authorResponse} = Astro.props;
 
 .CandRHeader h1 {
 	font-size: 21px;
-	margin-top: 6px;
+	margin-top: 0;
 }
 
 h3 a {
@@ -75,11 +66,15 @@ h3 span {
 }
 
 .left a {
-	color: var(--color-sun);
+	color: var(--color-sun-light);
 }
 
+/*.left h1, .left h3 {
+	text-align: left;
+}*/
+
 .right a {
-	color: var(--color-moon);
+	color: var(--color-moon-light);
 }
 
 @media screen and (min-width: 481px) and (max-width: 720px) {
@@ -93,9 +88,25 @@ h3 span {
 		display: none;
 	}
 
-	h3 span {
-		display: block;
+	.CandRHeader {
+		top: 70px;
+		padding: 12px;
 	}
+
+	.CandRHeader div {
+		padding: 0;
+		display: table-cell;
+		text-align: center; 
+	}
+
+
+	.left h3, .right h3 {
+		display: inline-block; 
+		margin: 0 auto;
+		text-align: center; 
+		vertical-align: middle
+	}
+
 }
 
 </style>

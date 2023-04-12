@@ -6,7 +6,9 @@
 	--color-bg: rgba(30,30,80,.7);
 	--chill-bg: rgba(30,30,80,.05);
 	--color-sun: #E24646;
-	--color-moon: #4B47AD;	
+	--color-moon: #4B47AD;
+	--color-sun-light: #ff9c77;
+	--color-moon-light: #aba8ff;
 	--bg-gradient: linear-gradient(135deg, rgba(161,0,68,1) 0%, rgba(19,0,138,1) 100%);
 	--bg-gradient-light: linear-gradient(135deg, var(--color-sun) 0%, var(--color-moon) 100%);
 	--size-h1: 46px;
@@ -18,7 +20,7 @@
 		--color-text: #ddd;
 		--color-text-light: #444;
 		--color-header: #fff;
-		--main-bg: rgba(0,0,0,.9);	
+		--main-bg: rgba(0,0,0,.85);	
 		--chill-bg: rgba(255,255,255,.3);	
 		-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
@@ -174,5 +176,9 @@ hr {
 	main {
 		padding: 12px;
 	}
+	body {
+		font-size: 16px;
+	}
+
 
 }

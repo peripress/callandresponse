@@ -116,7 +116,7 @@ blockquote {
 	color: var(--color-text-med);
 	font-family: 'Poppins', sans-serif;
 	font-size: 16px;
-	margin: 0px;
+	margin: 0 auto;
 	padding: 36px;
 }
 
@@ -128,8 +128,8 @@ main {
 section {
 	background: var(--main-bg);
 	border-radius: 6px;	
-	padding: 24px;
-	margin-bottom: 36px;
+	padding: var(--med-margin) 0;
+	margin-bottom: var(--med-margin);
 }
 
 hr {

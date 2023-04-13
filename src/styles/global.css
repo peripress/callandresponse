@@ -166,6 +166,14 @@ hr {
 		text-transform: uppercase;
 }
 
+
+#sagnik {
+	background-color: #000;
+	color: #fff;
+	font-family: 'Courier New', monospace;
+	padding: var(--med-margin);
+}
+
 span.call {
 	color: var(--color-sun);
 }

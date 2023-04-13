@@ -26,7 +26,7 @@ const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
 				{posts.map((post) => (
 					<a href={post.url}>					
 						<div class="features">
-							<h3 class="tinyPoppins"><span class="call">{post.frontmatter.callauthor}</span> → <span class="response">{post.frontmatter.responseauthor}</span></h3>
+							<h3 class="tinyPoppins"><span class="call">{post.frontmatter.callauthor}</span> · <span class="response">{post.frontmatter.responseauthor}</span></h3>
 							<h4><span class="call">{post.frontmatter.calltitle}</span> → <span class="response">{post.frontmatter.responsetitle}</span></h4>
 							<hr />	
 						</div>					

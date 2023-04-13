@@ -29,16 +29,39 @@ const {
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+
+	</head>
+	<body>
+		<Header />
+
+
+		
+		<main>
+			<div class="candrcontainer">
+
+			<CandRHeader 
+				titleCall={calltitle} authorCall={callauthor}
+				titleResponse={responsetitle} authorResponse={responseauthor}>			
+			</CandRHeader>
+
+				<slot />
+
+			</div>
+
+			<FooterIndex />
+
+			<Footer />
+		</main>
+
+
+
+	</body>
+
 		<style>
 			body {
 				max-width: 100%;
 			}
 
-/*			.next {
-				margin: 0 auto;
-				padding: 24px;
-				text-align: center;
-			}*/
 			#call {
 				background-color: #888;
 			}
@@ -58,7 +81,7 @@ const {
 			@media screen and (max-width: 480px) {
 
 				main {
-					top: 136px;
+					top: 124px;
 					left: 12px;
 					right: 12px;
 					bottom: 12px;
@@ -67,41 +90,5 @@ const {
 			}
 
 
-		</style>
-	</head>
-	<body>
-		<Header />
-
-
-		
-		<main>
-			<div class="candrcontainer">
-
-			<CandRHeader 
-				titleCall={calltitle} authorCall={callauthor}
-				titleResponse={responsetitle} authorResponse={responseauthor}>			
-			</CandRHeader>
-
-				<slot />
-
-			</div>
-
-			<div class="next">
-				<!-- <a href={nextpairurl}>Next Pair</a> -->
-			</div>
-<!-- 
-			{posts.map((post) => (
-			<a href={post.url}>					
-				<h3 class="footerIndex">{post.frontmatter.callauthor} → {post.frontmatter.responseauthor}</h3>
-			</a>
-			))} -->
-
-			<FooterIndex />
-
-			<Footer />
-		</main>
-
-
-
-	</body>
+		</style>	
 </html>

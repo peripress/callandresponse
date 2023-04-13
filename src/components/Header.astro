@@ -1,13 +1,14 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
+import '../styles/global.css';
 ---
 
 <header>
 	<nav>
 		<h1>{SITE_TITLE}</h1>
 		<div class="HeaderLinkContainer">
-			<a class="headerlink" href="/">I: Call and Response</a>
+			<a class="headerlink tinyPoppins" href="/">I: Call and Response</a>
 		</div>
 	</nav>
 </header>
@@ -45,10 +46,6 @@ import { SITE_TITLE } from '../config';
 		display: inline-block;
 		margin: 0 auto;
 		text-decoration: none;
-		font-family: 'Poppins', sans-serif;
-		font-size: 12px;
-		text-transform: uppercase;
-		letter-spacing: 2px;
 	}
 
 	@media screen and (max-width: 480px) {

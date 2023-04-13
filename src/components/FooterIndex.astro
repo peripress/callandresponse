@@ -1,0 +1,50 @@
+---
+
+import '../styles/global.css';
+
+
+// Use Astro.glob() to fetch all posts, and then sort them by order.
+const posts = (await Astro.glob('../pages/callandresponse/*.{md,mdx}')).sort(
+	(a, b) => {return a.frontmatter.order-b.frontmatter.order} 
+);
+
+---
+
+<hr />
+
+<div class="footerIndex">
+	<p>Read another pairing</p>
+	{posts.map((post) => (
+		<a href={post.url}>					
+			<h3 class="tinyPoppins"><span class="call">{post.frontmatter.callauthor}</span> → <span class="response">{post.frontmatter.responseauthor}</span></h3>
+		</a>
+	))}
+</div>
+
+<style>
+	.footerIndex {
+		padding: 0 24px;
+		text-align: center;
+	}
+
+	.footerIndex a {
+		opacity: .7;
+		text-decoration: none;
+	}
+
+	.footerIndex a:hover {
+		opacity: 1;
+	}
+
+	.footerIndex a h3 {
+		display: inline-block;
+		margin-right: 16px;
+	}
+
+	@media screen and (max-width: 480px) {
+
+		.footerIndex a h3 {
+			margin-right: 0;
+		}
+	}
+</style>

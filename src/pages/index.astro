@@ -4,12 +4,11 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 
-// Use Astro.glob() to fetch all posts, and then sort them by date.
+// Use Astro.glob() to fetch all posts, and then sort them by order.
 const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
 	(a, b) => {return a.frontmatter.order-b.frontmatter.order} 
 );
 
-const {responseadd} = '#response';
 ---
 
 <!DOCTYPE html>
@@ -24,15 +23,15 @@ const {responseadd} = '#response';
 		<main>
 			<h2 class="indexH2">Featuring</h2>
 			<section id="authors">
-					{posts.map((post) => (
-				<a href={post.url}>					
-					<div class="features">
-						<h3><span class="call">{post.frontmatter.callauthor}</span> → <span class="response">{post.frontmatter.responseauthor}</span></h3>
-						<h4><span class="call">{post.frontmatter.calltitle}</span> → <span class="response">{post.frontmatter.responsetitle}</span></h4>
-						<hr />	
-					</div>					
-				</a>	
-					))}
+				{posts.map((post) => (
+					<a href={post.url}>					
+						<div class="features">
+							<h3 class="tinyPoppins"><span class="call">{post.frontmatter.callauthor}</span> → <span class="response">{post.frontmatter.responseauthor}</span></h3>
+							<h4><span class="call">{post.frontmatter.calltitle}</span> → <span class="response">{post.frontmatter.responsetitle}</span></h4>
+							<hr />	
+						</div>					
+					</a>	
+				))}
 
 			</section>
 
@@ -97,19 +96,11 @@ const {responseadd} = '#response';
 	}
 	.features hr {
 		margin: 24px 0 0;
-		opacity: .3;
 	}
 	.lastline {
 		height: 1px;
 		background: var(--bg-gradient-light);
 	}
-	.features h3 {
-		color: var(--color-text-light);
-		font-family: 'Poppins', sans-serif;
-		font-size: 11px;
-		margin: 3px 0 6px;
-		padding: 0;
-	}	
 	.features h4 {
 		color: var(--color-text-light);
 		font-size: 24px;
@@ -120,13 +111,7 @@ const {responseadd} = '#response';
 		padding: 0 24px;
 		text-align: center;
 	}
-	span.call {
-		color: var(--color-sun);
-	}
 
-	span.response {
-		color: var(--color-moon);	
-	}
 	a {
 		opacity: .8;
 		text-decoration: none;

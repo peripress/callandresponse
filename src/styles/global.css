@@ -187,7 +187,7 @@ span.response {
 }
 
 .centeralign {
-	text-align: right;
+	text-align: center;
 }
 
 .singlespace p {
@@ -197,6 +197,10 @@ span.response {
 
 .smallPoem {
 	font-size: 14px;
+}
+
+.lightText {
+	color: var(--color-text-med);
 }
 
 

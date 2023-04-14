@@ -81,9 +81,10 @@ const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
 	section#authors {
 	}
 
-	section#editorial p, section#editorial p {
-		margin-left: var(--med-margin);
-		margin-right: var(--med-margin);
+	section#editorial p {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 600px;
 
 	}
 	h2.indexH2 {
@@ -166,6 +167,9 @@ const posts = (await Astro.glob('./callandresponse/*.{md,mdx}')).sort(
 		img#gradientbkg {
 			vertical-align: middle;
 		}
-		
+		section#editorial p {
+			margin-left: var(--med-margin);
+			margin-right: var(--med-margin);
+		}
 	}
 </style>

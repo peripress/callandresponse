@@ -8,30 +8,33 @@ const {authorResponse} = Astro.props;
 
 
 ---
-
-	<div class="CandRHeader">
-		<div class="left">
-			<h3 class="tinyPoppins"><a href="#call">{authorCall}</a></h3>
-			<h1><a href="#call">{titleCall}</a></h1>
-		</div>
-		<div class="right">
-			<h3 class="tinyPoppins"><a href="#response">{authorResponse}</a></h3>
-			<h1><a href="#response">{titleResponse}</a></h1>
-		</div>
+<div class="CandRHeader">
+	<div class="left">
+		<h3 class="tinyPoppins"><a href="#call">{authorCall}</a></h3>
+		<h1><a href="#call">{titleCall}</a></h1>
 	</div>
-
+	<div class="right">
+		<h3 class="tinyPoppins"><a href="#response">{authorResponse}</a></h3>
+		<h1><a href="#response">{titleResponse}</a></h1>
+	</div>
+</div>
 
 <style>
 
+.Safarifix, .CandRHeader, .CandRHeader div, .left, .right, .CandRHeader h1, .CandRHeader h3 {
+	z-index: 100000;
+  	-webkit-transform:translate3d(0,0,0);
+  	overflow: visible;
+}
+
 .CandRHeader {
 	align-content: center;
-	display: flex;
-	position: fixed;
+	display: flex;	
+	position: fixed;	
 	top: 40px;
 	left: 0;
 	right: 0;
-	z-index: 10000;
-	overflow: auto;
+	overflow: visible;
 	-webkit-font-smoothing: auto;
   	-moz-osx-font-smoothing: auto;
 }
@@ -42,7 +45,7 @@ const {authorResponse} = Astro.props;
 	width: 50%;
 }
 
-.CandRHeader h1, h3 {
+.CandRHeader h1, .CandRHeader h3 {
 	margin: 0;
 	padding: 0;
 }

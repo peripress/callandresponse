@@ -34,15 +34,14 @@ const {
 	<body>
 		<Header />
 
-
-		
+		<CandRHeader 
+			titleCall={calltitle} authorCall={callauthor}
+			titleResponse={responsetitle} authorResponse={responseauthor}>			
+		</CandRHeader>
+			
 		<main>
-			<div class="candrcontainer">
 
-			<CandRHeader 
-				titleCall={calltitle} authorCall={callauthor}
-				titleResponse={responsetitle} authorResponse={responseauthor}>			
-			</CandRHeader>
+			<div class="candrcontainer">
 
 				<slot />
 

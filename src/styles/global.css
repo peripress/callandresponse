@@ -137,7 +137,7 @@ hr {
 	background: linear-gradient(63deg, var(--color-sun) 0%, var(--color-moon) 100%);
 	color: #ddd;
   height: 1px;
-  margin: 48px auto;
+  margin: var(--big-margin) auto;
   opacity: .3;
   width: 100%;
 }

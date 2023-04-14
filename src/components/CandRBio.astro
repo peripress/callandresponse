@@ -2,16 +2,19 @@
 import '../styles/global.css';
 ---
 
+<hr />
+
 <div class="CandRbio">
-	<p>—</p>
 	<slot />
 </div>
 <style>
 
-.CandRbio {
-	color: #777;
-	font-size: 16px;
-	margin: 32px 0;
-	padding: 0 var(--big-margin) var(--med-margin);
-}
+	.CandRbio {
+		color: #777;
+		font-size: 16px;
+		margin: 32px auto;
+		padding: 0 var(--big-margin) var(--med-margin);
+		max-width: 700px;
+		text-align: center;
+	}
 </style>

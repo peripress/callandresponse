@@ -51,8 +51,12 @@ const {authorResponse} = Astro.props;
 }
 
 .CandRHeader h1 {
-	font-size: 21px;
+	font-size: 18px;
 	margin-top: 0;
+	overflow: hidden; 
+	white-space: nowrap;
+	text-overflow: ellipsis; 
+	display: inherit;
 }
 
 .CandRHeader h3.tinyPoppins {

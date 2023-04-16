@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://peripress.github.io/callandresponse',
+	site: 'https://peripress.github.io/',
+	base: '/callandresponse',
 	integrations: [mdx(), sitemap()],
 });

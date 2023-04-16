@@ -186,6 +186,13 @@ span.response {
 	text-align: right;
 }
 
+p.rightalignsingleline {
+	text-align: right;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin: -16px 0 -28px;
+}
+
 .centeralign {
 	text-align: center;
 }

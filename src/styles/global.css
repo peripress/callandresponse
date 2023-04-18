@@ -209,6 +209,11 @@ p.rightalignsingleline {
 	color: var(--color-text-med);
 }
 
+.darkText {
+	color: var(--color-text);
+	font-weight: 400;
+}
+
 
 @media screen and (max-width: 480px) {
 	:root {

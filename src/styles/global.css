@@ -26,7 +26,7 @@
 		--color-header: #fff;
 		--color-moon: #6173ee;		
 		--main-bg: rgba(0,0,0,.85);	
-		--chill-bg: rgba(255,255,255,.3);	
+		--chill-bg: rgba(255,255,255,.05);	
 		-webkit-font-smoothing: antialiased;
   	-moz-osx-font-smoothing: grayscale;
 	}

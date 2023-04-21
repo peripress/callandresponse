@@ -1,5 +1,5 @@
 :root {
-	--color-text: #444;
+	--color-text: #333;
 	--color-text-med: #666;
 	--color-text-light: #ccc;
 	--color-header: #222;
@@ -215,6 +215,9 @@ p.rightalignsingleline {
 	font-weight: 400;
 }
 
+.italicized {
+	font-style: italic;
+}
 
 @media screen and (max-width: 480px) {
 	:root {
